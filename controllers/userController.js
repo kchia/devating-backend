@@ -11,18 +11,20 @@ router.get('/', (req, res) => {
 
 router.get('/:email', (req, res) => {
   // declare current user
-  let currentUser = [];
+  let currentUser;
+  let matchedUsers = [];
   User.find({ email: req.params.email }).then(user => {
     currentUser = user;
-    User.find({ genderInterest: user[0].genderInterest }).then(users => {
-      res.json(users);
-      //   let matchedUsers = [];
-      //   for (i = 0; i < users.length; i++) {
-      //     if (users[i].genderInterest === currentUser.gender) {
-      //       matchedUsers.push(users[i]);
-      //     }
-      //   }
-      //   res.json(matchedUsers);
+    User.find({ gender: user[0].genderInterest }).then(users => {
+      for (let i = 0; i < users.length; i++) {
+        if (
+          users[i].genderInterest === currentUser[0].gender &&
+          users[i].email !== currentUser[0].email
+        ) {
+          matchedUsers.push(users[i]);
+        }
+      }
+      res.json(matchedUsers);
     });
   });
   // collect the gender interests of all other users
