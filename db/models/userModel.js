@@ -18,7 +18,8 @@ const UserSchema = new mongoose.Schema({
       id: { type: Number, required: true }
     }
   ],
-  genderInterest: { type: String, required: true }
+  genderInterest: { type: String, required: true },
+  keep: []
 });
 
 const User = mongoose.model('User', UserSchema);

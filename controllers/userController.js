@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   });
 });
 
+// ------------------ Get the user's email adress and matching other users based on their criteria -------------------------------//
 router.get('/:email', (req, res) => {
   // declare current user
   let currentUser;
@@ -73,4 +74,39 @@ router.get('/:email', (req, res) => {
   // let matchedUsers =
 });
 
+// -------------------------- Update the user's saved list of users (Adding a new matching user)---------------------------------//
+router.put('/save/:email/:saveEmail', (req, res) => {
+  // find the user by their email
+  const email = req.params.email;
+  // find the saving user by their email
+  const saveEmail = req.params.saveEmail;
+  const query = { email: email };
+  var update = { $push: { keep: saveEmail } };
+  var options = { new: true };
+
+  User.findOneAndUpdate(query, update, options, function(err, user) {
+    if (err) {
+      res.json(['error']);
+    }
+    res.json([user]);
+  });
+});
+
+// -------------------------- Update the user's saved list of users (Removing a new matching user) ---------------------------------//
+router.put('/remove/:email/:removeEmail', (req, res) => {
+  // find the user by their email
+  const email = req.params.email;
+  // find the saving user by their email
+  const removeEmail = req.params.removeEmail;
+  const query = { email: email };
+  var update = { $pull: { keep: removeEmail } };
+  var options = { new: true };
+
+  User.findOneAndUpdate(query, update, options, function(err, user) {
+    if (err) {
+      res.json(['error']);
+    }
+    res.json([user]);
+  });
+});
 module.exports = router;
