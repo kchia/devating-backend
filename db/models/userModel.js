@@ -5,6 +5,7 @@ const UserSchema = new mongoose.Schema({
   email: { type: String, required: true },
   name: { type: String, required: true },
   age: { type: Number, required: true },
+  gender: { type: String, required: true },
   favoriteActivities: [
     {
       image: { type: String, required: true },
@@ -17,7 +18,7 @@ const UserSchema = new mongoose.Schema({
       id: { type: Number, required: true }
     }
   ],
-  genderInterest: [{ type: String, required: true }]
+  genderInterest: { type: String, required: true }
 });
 
 const User = mongoose.model('User', UserSchema);

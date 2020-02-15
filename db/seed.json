@@ -4,6 +4,7 @@
     "email": "sharline@email.com",
     "name": "Sharline",
     "age": 41,
+    "gender": "Female",
     "favoriteActivities": [
       { "image": "https: //via.placeholder.com/150", "id": 1 },
       {
@@ -60,6 +61,7 @@
     "email": "Wanids@email.com",
     "name": "Wanids",
     "age": 27,
+    "gender": "Female",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -119,6 +121,7 @@
     "email": "terri-jo@email.com",
     "name": "Terri-jo",
     "age": 42,
+    "gender": "Female",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -178,6 +181,7 @@
     "email": "dante@email.com",
     "name": "Dante",
     "age": 41,
+    "gender": "Male",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -237,6 +241,7 @@
     "email": "sheffy@email.com",
     "name": "Sheffy",
     "age": 20,
+    "gender": "Female",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -296,6 +301,7 @@
     "email": "brandais@email.com",
     "name": "Brandais",
     "age": 28,
+    "gender": "Male",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -355,6 +361,7 @@
     "email": "karee@email.com",
     "name": "Karee",
     "age": 28,
+    "gender": "Female",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -414,6 +421,7 @@
     "email": "jacklyn@email.com",
     "name": "Jacklyn",
     "age": 48,
+    "gender": "Female",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -473,6 +481,7 @@
     "email": "zeb@email.com",
     "name": "Zeb",
     "age": 32,
+    "gender": "Male",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
@@ -532,6 +541,7 @@
     "email": "mar@email.com",
     "name": "Mar",
     "age": 20,
+    "gender": "Female",
     "favoriteActivities": [
       {
         "image": "https: //via.placeholder.com/150",
