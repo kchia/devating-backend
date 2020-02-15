@@ -61,17 +61,7 @@ router.get('/:email', (req, res) => {
 
       res.json(finalUsers);
     });
-    //match the currentUser to other users who have one of matching favorite codings
-
-    //match the currentUser to other users who have one of matching favorite activities
   });
-  // collect the gender interests of all other users
-
-  //res.json(users);
-
-  // find gender interest of currentUser and return all users whose gender interest !== currentUser.genderInterest
-
-  // let matchedUsers =
 });
 
 // -------------------------- Update the user's saved list of users (Adding a new matching user)---------------------------------//
@@ -109,4 +99,9 @@ router.put('/remove/:email/:removeEmail', (req, res) => {
     res.json([user]);
   });
 });
+
+// ----------------- Create a new User Account ----------------------------- //
+
+// ----------------- Remove a User Account -------------------------------- //
+
 module.exports = router;
