@@ -1,11 +1,22 @@
-const mongoose = require ('../connection');
+const mongoose = require('../connection');
 
 const UserSchema = new mongoose.Schema({
   image: { type: String, required: true },
+  email: { type: String, required: true },
   name: { type: String, required: true },
   age: { type: Number, required: true },
-  favoriteActivities: [{ type: String, required: true }],
-  favoriteCoding: [{ type: String, required: true }],
+  favoriteActivities: [
+    {
+      image: { type: String, required: true },
+      id: { type: Number, required: true }
+    }
+  ],
+  favoriteCoding: [
+    {
+      image: { type: String, required: true },
+      id: { type: Number, required: true }
+    }
+  ],
   genderInterest: [{ type: String, required: true }]
 });
 
