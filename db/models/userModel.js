@@ -19,7 +19,9 @@ const UserSchema = new mongoose.Schema({
     }
   ],
   genderInterest: { type: String, required: true },
-  keep: []
+  keep: [],
+  password: { type: String, required: true },
+  passwordConfirm: { type: String, required: true }
 });
 
 const User = mongoose.model('User', UserSchema);
