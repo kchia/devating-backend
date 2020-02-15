@@ -8,5 +8,10 @@ router.get('/', (req, res) => {
     res.json(users);
   });
 });
+router.get('/:email', (req, res) => {
+  User.find({ email: req.params.email }).then(users => {
+    res.json(users);
+  });
+});
 
 module.exports = router;
