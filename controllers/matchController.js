@@ -3,20 +3,20 @@ const router = express.Router();
 
 const User = require('../db/models/userModel');
 
-router.get('/', (req, res) => {
+// ------------------------ OUR HANDLERS ----------------------------------- //
+
+const getUsers = (req, res) => {
   User.find({}).then(users => {
     res.json(users);
   });
-});
+};
 
-// ------------------ Get the user's email address and matching other users based on their criteria -------------------------------//
-router.get('/:email', (req, res) => {
-  // declare current user
+const matchUsers = async (req, res) => {
   let currentUser;
   let matchedUsers = [];
   let finalUsers = [];
   let isMatched = false;
-  User.find({ email: req.params.email }).then(user => {
+  await User.find({ email: req.params.email }).then(user => {
     currentUser = user;
     User.find({ gender: user[0].genderInterest }).then(users => {
       for (let i = 0; i < users.length; i++) {
@@ -62,10 +62,10 @@ router.get('/:email', (req, res) => {
       res.json(finalUsers);
     });
   });
-});
+};
+// declare current user
 
-// -------------------------- Update the user's saved list of users (Adding a new matching user)---------------------------------//
-router.put('/save/:email/:saveEmail', (req, res) => {
+const updateMatchKeepAdd = (req, res) => {
   // find the user by their email
   const email = req.params.email;
   // find the saving user by their email
@@ -80,10 +80,9 @@ router.put('/save/:email/:saveEmail', (req, res) => {
     }
     res.json([user]);
   });
-});
+};
 
-// -------------------------- Update the user's saved list of users (Removing a new matching user) ---------------------------------//
-router.put('/remove/:email/:removeEmail', (req, res) => {
+const updateMatchKeepRemove = (req, res) => {
   // find the user by their email
   const email = req.params.email;
   // find the saving user by their email
@@ -98,10 +97,18 @@ router.put('/remove/:email/:removeEmail', (req, res) => {
     }
     res.json([user]);
   });
-});
+};
 
-// ----------------- Create a new User Account ----------------------------- //
+// ------------------------ OUR ROUTERS ----------------------------------- //
+router.get('/', getUsers);
 
-// ----------------- Remove a User Account -------------------------------- //
+// ------------------ Get the user's email address and matching other users based on their criteria -------------------------------//
+router.get('/:email', matchUsers);
+
+// -------------------------- Update the user's saved list of users (Adding a new matching user)---------------------------------//
+router.put('/save/:email/:saveEmail', updateMatchKeepAdd);
+
+// -------------------------- Update the user's saved list of users (Removing a new matching user) ---------------------------------//
+router.put('/remove/:email/:removeEmail', updateMatchKeepRemove);
 
 module.exports = router;

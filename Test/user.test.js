@@ -14,8 +14,8 @@ describe('POST /signup', () => {
     favoriteActivities: [{ image: 'https://via.placeholder.com/150', id: '5' }],
     favoriteCoding: [{ image: 'https://via.placeholder.com/150', id: '5' }],
     genderInterest: 'Male',
-    password: '1234',
-    passwordConfirm: '1234'
+    password: 'password1234',
+    passwordConfirm: 'password1234'
   };
 
   before(done => {
