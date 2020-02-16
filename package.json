@@ -23,7 +23,8 @@
     "express": "^4.17.1",
     "mocha": "^7.0.1",
     "mongoose": "^5.9.0",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "validator": "^12.2.0"
   },
   "devDependencies": {}
 }
