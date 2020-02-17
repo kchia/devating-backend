@@ -6,22 +6,7 @@
     "age": 41,
     "gender": "Female",
     "favoriteActivities": [
-      { 
-        "image": "https: //via.placeholder.com/150", 
-        "id": 6 
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
-        "id": 6
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
-        "id": 6
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
-        "id": 6
-      },
+
       {
         "image": "https: //via.placeholder.com/150",
         "id": 6

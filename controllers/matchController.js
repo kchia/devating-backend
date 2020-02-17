@@ -11,6 +11,12 @@ const getUsers = (req, res) => {
   });
 };
 
+const getUser = (req, res) => {
+  User.find({ email: req.params.email }).then(user => {
+    res.json(user);
+  });
+};
+
 const matchUsers = async (req, res) => {
   let currentUser;
   let matchedUsers = [];
@@ -24,7 +30,7 @@ const matchUsers = async (req, res) => {
           users[i].genderInterest === currentUser[0].gender &&
           users[i].email !== currentUser[0].email
         ) {
-          for (let j = 0; j < users[i].favoriteCoding.length; j++) {
+          for (let j = 0; j < currentUser[0].favoriteCoding.length; j++) {
             for (let k = 0; k < users[i].favoriteCoding.length; k++) {
               if (
                 currentUser[0].favoriteCoding[j].id ===
@@ -43,12 +49,11 @@ const matchUsers = async (req, res) => {
       isMatched = false;
 
       for (let l = 0; l < matchedUsers.length; l++) {
-        for (let m = 0; m < matchedUsers[l].favoriteActivities.length; m++) {
-          // TODO: changed matchedUsers to users here. Test if it works when matchedUsers have different number of favorite activities than users
+        for (let m = 0; m < currentUser[0].favoriteActivities.length; m++) {
           for (let n = 0; n < matchedUsers[l].favoriteActivities.length; n++) {
             if (
               currentUser[0].favoriteActivities[m].id ===
-              users[l].favoriteActivities[n].id
+              matchedUsers[l].favoriteActivities[n].id
             ) {
               isMatched = true;
             }
@@ -104,6 +109,8 @@ const updateMatchKeepRemove = (req, res) => {
 router.get('/', getUsers);
 
 // ------------------ Get the user's email address and matching other users based on their criteria -------------------------------//
+
+
 router.get('/:email', matchUsers);
 
 // -------------------------- Update the user's saved list of users (Adding a new matching user)---------------------------------//
