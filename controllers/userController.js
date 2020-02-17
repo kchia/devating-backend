@@ -23,16 +23,17 @@ router.delete('/:id/delete', (req, res) => {
 });
 
 // sign in
-router.get('/signin', (req,res) => {
-    User.find({ email: req.params.email }).then(user => {
-      if(user){
-        if (user[0].password === req.params.password){
-          res.json(user);
-        }
-        else {res.json('ERROR')}
-      }
-      else {res.json('ERROR')}
-    });
+router.get('/signin', (req, res) => {
+  User.find({ email: req.params.email }).then(user => {
+    res.json(user);
+    //   if(user){
+    //     if (user[0].password === req.params.password){
+    //       res.json(user);
+    //     }
+    //     else {res.json('ERROR')}
+    //   }
+    //   else {res.json('ERROR')}
+  });
 });
 
 module.exports = router;
