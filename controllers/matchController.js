@@ -44,6 +44,7 @@ const matchUsers = async (req, res) => {
 
       for (let l = 0; l < matchedUsers.length; l++) {
         for (let m = 0; m < matchedUsers[l].favoriteActivities.length; m++) {
+          // TODO: changed matchedUsers to users here. Test if it works when matchedUsers have different number of favorite activities than users
           for (let n = 0; n < matchedUsers[l].favoriteActivities.length; n++) {
             if (
               currentUser[0].favoriteActivities[m].id ===

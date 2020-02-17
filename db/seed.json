@@ -8,15 +8,27 @@
     "favoriteActivities": [
       { 
         "image": "https: //via.placeholder.com/150", 
-        "id": 1 
+        "id": 6 
       },
       {
         "image": "https: //via.placeholder.com/150",
-        "id": 2
+        "id": 6
       },
       {
         "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "id": 6
+      },
+      {
+        "image": "https: //via.placeholder.com/150",
+        "id": 6
+      },
+      {
+        "image": "https: //via.placeholder.com/150",
+        "id": 6
+      },
+      {
+        "image": "https: //via.placeholder.com/150",
+        "id": 5
       }
     ],
     "favoriteCoding": [
@@ -134,6 +146,10 @@
       {
         "image": "https: //via.placeholder.com/150",
         "id": 3
+      },
+      {
+        "image": "https: //via.placeholder.com/150",
+        "id": 5
       }
     ],
     "favoriteCoding": [
