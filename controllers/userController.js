@@ -23,15 +23,15 @@ router.delete('/:id/delete', (req, res) => {
 });
 
 // sign in
-router.get('/signin', (req,res) => {
-    User.find({ email: req.params.email }).then(user => {
+router.get('/signin/:email/:password', (req, res) => {
+  User.find({ email: req.params.email, password: req.params.password })
+    .then(user => {
       if(user){
-        if (user[0].password === req.params.password){
-          res.json(user);
-        }
-        else {res.json('ERROR')}
+      res.json(user);
       }
-      else {res.json('ERROR')}
+    })
+    .catch(function(err) {
+      res.json(err);
     });
 });
 
