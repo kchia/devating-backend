@@ -88,14 +88,29 @@ const updateMatchKeepAdd = (req, res) => {
   });
 };
 
-const updateMatchKeepRemove = (req, res) => {
-  // find the user by their email
+// const updateMatchKeepRemove = (req, res) => {
+//   // find the user by their email
+//   const email = req.params.email;
+//   // find the saving user by their email
+//   const removeEmail = req.params.removeEmail;
+//   const query = { email: email };
+//   var update = { $set: { keep: removeEmail } };
+//   var options = { new: true };
+
+//   User.findOneAndUpdate(query, update, options, function(err, user) {
+//     if (err) {
+//       res.json(['error']);
+//     }
+//     res.json([user]);
+//   });
+// };
+
+const updateKeep = (req, res) => {
   const email = req.params.email;
-  // find the saving user by their email
-  const removeEmail = req.params.removeEmail;
+  const keep = req.body.keep;
   const query = { email: email };
-  var update = { $set: { keep: removeEmail } };
-  var options = { new: true };
+  let update = { $set: { keep: keep } };
+  let options = { new: true };
 
   User.findOneAndUpdate(query, update, options, function(err, user) {
     if (err) {
@@ -118,6 +133,6 @@ router.get('/get/:email', getUser);
 router.put('/save/:email/:saveEmail', updateMatchKeepAdd);
 
 // -------------------------- Update the user's saved list of users (Removing a new matching user) ---------------------------------//
-router.put('/remove/:email/:removeEmail', updateMatchKeepRemove);
+router.put('/update/:email', updateKeep);
 
 module.exports = router;
