@@ -94,7 +94,7 @@ const updateMatchKeepRemove = (req, res) => {
   // find the saving user by their email
   const removeEmail = req.params.removeEmail;
   const query = { email: email };
-  var update = { $pull: { keep: removeEmail } };
+  var update = { $set: { keep: removeEmail } };
   var options = { new: true };
 
   User.findOneAndUpdate(query, update, options, function(err, user) {
@@ -110,8 +110,9 @@ router.get('/', getUsers);
 
 // ------------------ Get the user's email address and matching other users based on their criteria -------------------------------//
 
-
 router.get('/:email', matchUsers);
+
+router.get('/get/:email', getUser);
 
 // -------------------------- Update the user's saved list of users (Adding a new matching user)---------------------------------//
 router.put('/save/:email/:saveEmail', updateMatchKeepAdd);
