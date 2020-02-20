@@ -141,11 +141,15 @@ UserSchema: {
 
 ## UX Modifications/Hurdles/Unsolved problems:
 
-- user profile picture upload we removed
+- User profile picture upload we removed
+- Terminal hurdles install conflicts
+- Merging repo to front-end
+- Pairing hurdles when pulling data
+- Pairing hurdles with Visual Code missing/adding data
 
 ## Future Add-ons:
 
-- user authentication & authorization
+- User authentication & authorization
 - Feature to allow user to have calendar access to book for a date
 - Users creating new account to be able to upload an image
 - Chat capability
@@ -163,9 +167,3 @@ UserSchema: {
 
 - https://github.com/jadekang0611/dorstep/blob/master/README.md;
   Jade
-
-- daisyy125/ga-project-2-spelling
-  Website
-  https://spellingbusybees.herokuapp.com/
-  Language
-  JavaScript
