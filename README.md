@@ -97,12 +97,12 @@ UserSchema: {
 - [x] Testing: Mocha & Chai
 
 **Silver version**
-- [ ] Styling
-- [ ] Additional Schema for User Profile page
+- [x] Styling
+- [x] Additional Schema for User Profile page
 
 **Gold version**
 - [ ] User Authentication
-- [ ] User interaction - to be able to see accepted matches on user dashboard
+- [x] User interaction - to be able to see accepted matches on user dashboard
 - [ ] Feature to allow user to have calendar access to book a day for a date
 
 
@@ -113,6 +113,7 @@ UserSchema: {
 - Mongoose API
 - MongoDB
 - Supertest, Mocha & Chai
+- Postman
 
 
 ## Installation:
@@ -120,6 +121,9 @@ UserSchema: {
 ## Usage:
 
 ## Testing:
+
+Passed mocha & chai testing:
+![Test results](https://user-images.githubusercontent.com/58707118/74971574-5022c800-53ee-11ea-91cd-e2e18e393cb2.png)
 
 ## UX Modifications/Hurdles/Unsolved problems:
 
