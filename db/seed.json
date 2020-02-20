@@ -6,35 +6,42 @@
     "age": 41,
     "gender": "Female",
     "favoriteActivities": [
-      { 
-        "image": "https: //via.placeholder.com/150", 
-        "id": 1 
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/cooking.png",
+        "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/skiing.png",
         "id": 3
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/running.png",
+        "id": 6
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/javascript.png",
         "id": 3
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/python.png",
+        "id": 6
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/sql.png",
+        "id": 8
       }
     ],
     "genderInterest": "Male",
-    "keep": [],
+    "keep": [{
+      "name": "Dante",
+      "image": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=350"
+    },
+  {
+    "name": "Zeb",
+    "image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=350"
+  }],
     "password": "1234",
     "passwordConfirm": "1234"
   },
@@ -46,30 +53,30 @@
     "gender": "Female",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/gaming.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/skiing.png",
         "id": 3
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/trekking.png",
+        "id": 5
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/java.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/php.png",
+        "id": 5
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/sql.png",
+        "id": 8
       }
     ],
     "genderInterest": "Male",
@@ -85,30 +92,30 @@
     "gender": "Female",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/gaming.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/traveling.png",
+        "id": 4
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/running.png",
+        "id": 6
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/c_.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/javascript.png",
+        "id": 3
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/python.png",
+        "id": 6
       }
     ],
     "genderInterest": "Male",
@@ -124,30 +131,34 @@
     "gender": "Male",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/cooking.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/skiing.png",
+        "id": 3
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/traveling.png",
+        "id": 4
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/running.png",
+        "id": 6
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/java.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/nodeJS.png",
+        "id": 4
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/python.png",
+        "id": 6
       }
     ],
     "genderInterest": "Female",
@@ -163,30 +174,30 @@
     "gender": "Female",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/skiing.png",
         "id": 3
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/trekking.png",
+        "id": 5
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/running.png",
+        "id": 6
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/c_.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/nodeJS.png",
+        "id": 4
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/react.png",
+        "id": 7
       }
     ],
     "genderInterest": "Female",
@@ -202,33 +213,37 @@
     "gender": "Male",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/cooking.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/gaming.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/skiing.png",
         "id": 3
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/running.png",
+        "id": 6
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/java.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/php.png",
+        "id": 5
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/sql.png",
+        "id": 8
       }
     ],
-    "genderInterest": "Male",
+    "genderInterest": "Female",
     "keep": [],
     "password": "1234",
     "passwordConfirm": "1234"
@@ -241,30 +256,30 @@
     "gender": "Female",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/cooking.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/gaming.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/traveling.png",
+        "id": 4
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/c_.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/java.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/react.png",
+        "id": 7
       }
     ],
     "genderInterest": "Male",
@@ -280,30 +295,30 @@
     "gender": "Female",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/gaming.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/traveling.png",
+        "id": 4
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/trekking.png",
+        "id": 5
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/nodeJS.png",
+        "id": 4
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/python.png",
+        "id": 6
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/sql.png",
+        "id": 8
       }
     ],
     "genderInterest": "Male",
@@ -319,30 +334,34 @@
     "gender": "Male",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/cooking.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/gaming.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/traveling.png",
+        "id": 4
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/trekking.png",
+        "id": 5
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/c_.png",
         "id": 1
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 2
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/javascript.png",
+        "id": 3
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/swift.png",
+        "id": 9
       }
     ],
     "genderInterest": "Female",
@@ -358,30 +377,30 @@
     "gender": "Female",
     "favoriteActivities": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/gaming.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/traveling.png",
+        "id": 4
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/running.png",
+        "id": 6
       }
     ],
     "favoriteCoding": [
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 1
-      },
-      {
-        "image": "https: //via.placeholder.com/150",
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/java.png",
         "id": 2
       },
       {
-        "image": "https: //via.placeholder.com/150",
-        "id": 3
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/php.png",
+        "id": 5
+      },
+      {
+        "image": "https://daisypictures.s3.us-east-2.amazonaws.com/swift.png",
+        "id": 9
       }
     ],
     "genderInterest": "Female",

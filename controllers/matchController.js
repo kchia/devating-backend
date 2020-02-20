@@ -11,6 +11,12 @@ const getUsers = (req, res) => {
   });
 };
 
+const getUser = (req, res) => {
+  User.find({ email: req.params.email }).then(user => {
+    res.json(user);
+  });
+};
+
 const matchUsers = async (req, res) => {
   let currentUser;
   let matchedUsers = [];
@@ -24,7 +30,7 @@ const matchUsers = async (req, res) => {
           users[i].genderInterest === currentUser[0].gender &&
           users[i].email !== currentUser[0].email
         ) {
-          for (let j = 0; j < users[i].favoriteCoding.length; j++) {
+          for (let j = 0; j < currentUser[0].favoriteCoding.length; j++) {
             for (let k = 0; k < users[i].favoriteCoding.length; k++) {
               if (
                 currentUser[0].favoriteCoding[j].id ===
@@ -43,11 +49,11 @@ const matchUsers = async (req, res) => {
       isMatched = false;
 
       for (let l = 0; l < matchedUsers.length; l++) {
-        for (let m = 0; m < matchedUsers[l].favoriteActivities.length; m++) {
+        for (let m = 0; m < currentUser[0].favoriteActivities.length; m++) {
           for (let n = 0; n < matchedUsers[l].favoriteActivities.length; n++) {
             if (
               currentUser[0].favoriteActivities[m].id ===
-              users[l].favoriteActivities[n].id
+              matchedUsers[l].favoriteActivities[n].id
             ) {
               isMatched = true;
             }
@@ -82,14 +88,29 @@ const updateMatchKeepAdd = (req, res) => {
   });
 };
 
-const updateMatchKeepRemove = (req, res) => {
-  // find the user by their email
+// const updateMatchKeepRemove = (req, res) => {
+//   // find the user by their email
+//   const email = req.params.email;
+//   // find the saving user by their email
+//   const removeEmail = req.params.removeEmail;
+//   const query = { email: email };
+//   var update = { $set: { keep: removeEmail } };
+//   var options = { new: true };
+
+//   User.findOneAndUpdate(query, update, options, function(err, user) {
+//     if (err) {
+//       res.json(['error']);
+//     }
+//     res.json([user]);
+//   });
+// };
+
+const updateKeep = (req, res) => {
   const email = req.params.email;
-  // find the saving user by their email
-  const removeEmail = req.params.removeEmail;
+  const keep = req.body.keep;
   const query = { email: email };
-  var update = { $pull: { keep: removeEmail } };
-  var options = { new: true };
+  let update = { $set: { keep: keep } };
+  let options = { new: true };
 
   User.findOneAndUpdate(query, update, options, function(err, user) {
     if (err) {
@@ -103,12 +124,15 @@ const updateMatchKeepRemove = (req, res) => {
 router.get('/', getUsers);
 
 // ------------------ Get the user's email address and matching other users based on their criteria -------------------------------//
+
 router.get('/:email', matchUsers);
+
+router.get('/get/:email', getUser);
 
 // -------------------------- Update the user's saved list of users (Adding a new matching user)---------------------------------//
 router.put('/save/:email/:saveEmail', updateMatchKeepAdd);
 
 // -------------------------- Update the user's saved list of users (Removing a new matching user) ---------------------------------//
-router.put('/remove/:email/:removeEmail', updateMatchKeepRemove);
+router.put('/update/:email', updateKeep);
 
 module.exports = router;
