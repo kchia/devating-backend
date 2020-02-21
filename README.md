@@ -1,5 +1,9 @@
 # Devating : Back-end
 
+![devating-logo (2)](https://user-images.githubusercontent.com/56938630/75009160-d19a4a80-542e-11ea-9737-c7e3532f36ef.png)
+
+[To our API URL](https://devating-backend.herokuapp.com/match/)
+
 ## Project Overview
 
 Do you think pair programming can be romantic? YES!! We’re introducing the next generation of pair programming - a new level of connection. Devating is a matching dating app for developers based on their coding preferences, where there are no pair partners left behind. This is the back-end planning and you can view the front-end planning [here](https://github.com/jadekang0611/devating-frontend/tree/master)
@@ -142,9 +146,11 @@ UserSchema: {
 ## UX Modifications/Hurdles:
 
 **Modifications**
+
 - Removed User profile picture upload feature
 
 **Hurdles**
+
 - Locating conflicting files when doing css
 - Terminal dependencies installation conflicts
 - Fetching backend api from frontend
@@ -168,7 +174,7 @@ In addition to collaboratively engineering Devating app, we each had a dedicated
 
 - Sage Kearney- dedicated and skilled UI developer that brought our ideas to life. Led the user storyboard and user interface development with her perfection.
 
-- Abdul James - QA Engineer that debugged/troubleshoot our development environment and involved in all phases of the app creation. 
+- Abdul James - QA Engineer that debugged/troubleshoot our development environment and involved in all phases of the app creation.
 
 ## Credits:
 
