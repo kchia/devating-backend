@@ -129,23 +129,26 @@ UserSchema: {
 
 - Clone and download this repo
 - In the terminal run npm install then npm install nodemon
-- after installation the terminal will display the port used
-- type in the browser localhost then port number.
+- After installation the terminal will display the port used
+- Type in the browser localhost then port number.
 - The list of data used will be shown on page...
 
 ## Testing:
 
-- Passed mocha, chai
-  & supertest testing:
-  ![Test results](https://user-images.githubusercontent.com/ 58707118/74971574-5022c800-53ee-11ea-91cd-e2e18e393cb2.png)
+- Mocha, Chai & SuperTest - passed
 
-## UX Modifications/Hurdles/Unsolved problems:
+![Test results](https://user-images.githubusercontent.com/58707118/74971574-5022c800-53ee-11ea-91cd-e2e18e393cb2.png)
 
-- User profile picture upload we removed
-- Terminal hurdles install conflicts
-- Merging repo to front-end
-- Pairing hurdles when pulling data
-- Pairing hurdles with Visual Code missing/adding data
+## UX Modifications/Hurdles:
+
+**Modifications**
+- Removed User profile picture upload feature
+
+**Hurdles**
+- Locating conflicting files when doing css
+- Terminal dependencies installation conflicts
+- Fetching backend api from frontend
+- Visual Code missing/adding data when pair programming
 
 ## Future Add-ons:
 
@@ -157,13 +160,16 @@ UserSchema: {
 
 ## Contribution Guidelines:
 
-- Jade Kang
-- Daisy Yau
-- Sage Kearney
-- Abdul James
-- Google search
+In addition to collaboratively engineering Devating app, we each had a dedicated role:
+
+- Jade Kang - applied agile methodology as a scrum master and provided research/resources to spearhead the algorithm creation of the app.
+
+- Daisy Yau - project manager that helped organize and prioritize tasks throughout daily sprint. Acted as liaison between scrum master & engineers.
+
+- Sage Kearney- dedicated and skilled UI developer that brought our ideas to life. Led the user storyboard and user interface development with her perfection.
+
+- Abdul James - QA Engineer that debugged/troubleshoot our development environment and involved in all phases of the app creation. 
 
 ## Credits:
 
-- https://github.com/jadekang0611/dorstep/blob/master/README.md;
-  Jade
+- Stack Overflow
