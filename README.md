@@ -2,7 +2,7 @@
 
 ![Copy of devating-logo](https://user-images.githubusercontent.com/56938630/75009422-803e8b00-542f-11ea-89fd-63a879dd9177.png)
 
-[To our API URL](https://devating-backend.herokuapp.com/match/)
+[Link to Devating API endpoint](https://devating-backend.herokuapp.com/match/)
 
 ## Project Overview
 
