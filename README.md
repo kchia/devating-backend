@@ -1,6 +1,6 @@
 # Devating : Back-end
 
-![devating-logo (2)](https://user-images.githubusercontent.com/56938630/75009160-d19a4a80-542e-11ea-9737-c7e3532f36ef.png)
+![Copy of devating-logo](https://user-images.githubusercontent.com/56938630/75009422-803e8b00-542f-11ea-89fd-63a879dd9177.png)
 
 [To our API URL](https://devating-backend.herokuapp.com/match/)
 
