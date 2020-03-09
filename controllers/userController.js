@@ -10,6 +10,7 @@ router.post('/signup', (req, res) => {
   });
 });
 
+// remove unused code below
 // update user information
 // router.put('/:id/edit', (req, res) => {
 //   User.findByIdAndUpdate({ _id: req.params.id }, req.body, {
