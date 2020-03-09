@@ -34,9 +34,9 @@ const matchUsers = async (req, res) => {
 
   await User.find({ email: req.params.email }).then(user => {
     currentUser = user;
+    // You can also use async/await for the async call on line 38
     User.find({ gender: user[0].genderInterest }).then(users => {
-      // You can also use async/await here
-      // Can you think of a way to separate the logic lines 37-74 into separate functions for better readability?
+      // Can you think of a way to separate the logic lines 40-81 into separate functions for better readability?
       for (let i = 0; i < users.length; i++) {
         if (
           // Instead of accessing currentUser[0] repeatedly below, can we store the value in a variable for reuse?
@@ -62,7 +62,7 @@ const matchUsers = async (req, res) => {
       }
       isMatched = false;
 
-      // Is there a way to optimize the algorithm below by converting favoriteActivities into a set data structure?
+      // Is there a way to optimize the algorithm below by converting favoriteActivities into a Set data structure?
       for (let l = 0; l < matchedUsers.length; l++) {
         for (let m = 0; m < currentUser[0].favoriteActivities.length; m++) {
           for (let n = 0; n < matchedUsers[l].favoriteActivities.length; n++) {
