@@ -17,16 +17,27 @@ const getUser = (req, res) => {
   });
 };
 
+// Hou comment: nice job trying out the async/await pattern here!
 const matchUsers = async (req, res) => {
   let currentUser;
   let matchedUsers = [];
   let finalUsers = [];
   let isMatched = false;
+  
+  // Since you're using async/await, you no longer have to use a promise method like .then() to handle the promise
+  // Instead you can do something like:
+    // const user = await User.find({ email: req.params.email }); --> JavaScript will wait until this promise resolves before moving on to the next line
+    // currentUser = user;
+  // It is also common to wrap an awaited function inside of a try/catch block. Read more here: https://developers.google.com/web/fundamentals/primers/async-functions 
+  
   await User.find({ email: req.params.email }).then(user => {
     currentUser = user;
-    User.find({ gender: user[0].genderInterest }).then(users => {
+    User.find({ gender: user[0].genderInterest }).then(users => { // You can also use async/await here
+      // Can you think of a way to separate the logic lines 37-74 into separate functions for better readability?
       for (let i = 0; i < users.length; i++) {
         if (
+          // Instead of accessing currentUser[0] repeatedly below, can we store the value in a variable for reuse?
+          // const currentUserObject = currentUser[0];
           users[i].genderInterest === currentUser[0].gender &&
           users[i].email !== currentUser[0].email
         ) {
@@ -47,7 +58,8 @@ const matchUsers = async (req, res) => {
         }
       }
       isMatched = false;
-
+      
+      // Is there a way to optimize the algorithm below by converting favoriteActivities into a set data structure? 
       for (let l = 0; l < matchedUsers.length; l++) {
         for (let m = 0; m < currentUser[0].favoriteActivities.length; m++) {
           for (let n = 0; n < matchedUsers[l].favoriteActivities.length; n++) {
@@ -69,6 +81,7 @@ const matchUsers = async (req, res) => {
     });
   });
 };
+// remove comment
 // declare current user
 
 const updateMatchKeepAdd = (req, res) => {
@@ -88,6 +101,7 @@ const updateMatchKeepAdd = (req, res) => {
   });
 };
 
+// remove unused code below
 // const updateMatchKeepRemove = (req, res) => {
 //   // find the user by their email
 //   const email = req.params.email;
