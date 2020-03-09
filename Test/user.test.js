@@ -5,6 +5,8 @@ const supertest = require('supertest');
 const api = supertest('http://localhost:7000/match');
 
 describe('POST /signup', () => {
+  // To reduce code repetition, consider declaring the Becca user in the
+  // global scope so that it can be accessed within each describe block
   const newUser = {
     name: 'Becca',
     image: 'https://media.giphy.com/media/tghHsahSrWTEk/giphy.gif',

@@ -1,3 +1,5 @@
+// Consider adding proper error handling for all your routes. See Jen's tutorial: https://git.generalassemb.ly/jmeade11/mern-auth-tutorial#handling-errors-in-express-apis
+
 const express = require('express');
 const router = express.Router();
 
@@ -23,16 +25,17 @@ const matchUsers = async (req, res) => {
   let matchedUsers = [];
   let finalUsers = [];
   let isMatched = false;
-  
+
   // Since you're using async/await, you no longer have to use a promise method like .then() to handle the promise
   // Instead you can do something like:
-    // const user = await User.find({ email: req.params.email }); --> JavaScript will wait until this promise resolves before moving on to the next line
-    // currentUser = user;
-  // It is also common to wrap an awaited function inside of a try/catch block. Read more here: https://developers.google.com/web/fundamentals/primers/async-functions 
-  
+  // const user = await User.find({ email: req.params.email }); --> JavaScript will wait until this promise resolves before moving on to the next line
+  // currentUser = user;
+  // It is also common to wrap an awaited function inside of a try/catch block. Read more here: https://developers.google.com/web/fundamentals/primers/async-functions
+
   await User.find({ email: req.params.email }).then(user => {
     currentUser = user;
-    User.find({ gender: user[0].genderInterest }).then(users => { // You can also use async/await here
+    User.find({ gender: user[0].genderInterest }).then(users => {
+      // You can also use async/await here
       // Can you think of a way to separate the logic lines 37-74 into separate functions for better readability?
       for (let i = 0; i < users.length; i++) {
         if (
@@ -58,8 +61,8 @@ const matchUsers = async (req, res) => {
         }
       }
       isMatched = false;
-      
-      // Is there a way to optimize the algorithm below by converting favoriteActivities into a set data structure? 
+
+      // Is there a way to optimize the algorithm below by converting favoriteActivities into a set data structure?
       for (let l = 0; l < matchedUsers.length; l++) {
         for (let m = 0; m < currentUser[0].favoriteActivities.length; m++) {
           for (let n = 0; n < matchedUsers[l].favoriteActivities.length; n++) {
