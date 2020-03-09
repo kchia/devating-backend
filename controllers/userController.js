@@ -1,3 +1,5 @@
+// Consider adding proper error handling for all your routes. See Jen's tutorial: https://git.generalassemb.ly/jmeade11/mern-auth-tutorial#handling-errors-in-express-apis
+
 const express = require('express');
 const router = express.Router();
 
@@ -10,6 +12,7 @@ router.post('/signup', (req, res) => {
   });
 });
 
+// remove unneeded code below
 // update user information
 // router.put('/:id/edit', (req, res) => {
 //   User.findByIdAndUpdate({ _id: req.params.id }, req.body, {
